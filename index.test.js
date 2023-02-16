@@ -40,9 +40,9 @@ describe('Restaurant and Menu Models', () => {
     //     expect('NO TEST').toEqual('EXPECTED DATA')
     // });
 
-    // test('can delete Restaurants', async () => {
-    //     const restaurant3 = await Restaurant.create({ name: 'McDonalds', location: 'Edinburgh', cuisine: 'Burgers and fries' });
-    //     let deletedRestaurant3 = restaurant3.destroy(); 
-    //     expect(deletedRestaurant3).toEqual({}); 
-    // });
+    test('can delete Restaurants', async () => {
+        const restaurant3 = await Restaurant.create({ name: 'McDonalds', location: 'Edinburgh', cuisine: 'Burgers and fries' });
+        let deletedRestaurant3 = restaurant3.destroy(); 
+        expect(deletedRestaurant3 === null); 
+    });
 })
