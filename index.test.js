@@ -36,10 +36,12 @@ describe('Restaurant and Menu Models', () => {
         expect (restaurant22 === restaurant33);
     });
 
-    // test('can find Menus', async () => {
-    //     // TODO - write test
-    //     expect('NO TEST').toEqual('EXPECTED DATA')
-    // });
+    test('can find Menu', async () => {
+        const menu33 = await Menu.create(seedMenu[0]);
+        const menu22 = await Menu.findByPk(1);
+        //const restaurant23 = await Restaurant.findAll()
+        expect (menu22 === menu33);
+    });
 
     test('can delete Restaurants', async () => {
         const restaurant3 = await Restaurant.create({ name: 'McDonalds', location: 'Edinburgh', cuisine: 'Burgers and fries' });
