@@ -1,5 +1,6 @@
 const {sequelize} = require('./db')
-const {Restaurant, Menu} = require('./models/index')
+const {Restaurant, Menu, Item} = require('./models/index')
+
 const {
     seedRestaurant,
     seedMenu,
