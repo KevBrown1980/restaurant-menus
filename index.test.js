@@ -29,11 +29,12 @@ describe('Restaurant and Menu Models', () => {
             expect(menu1.title).toBe('Evening');
     });
 
-    // test('can find Restaurants', async () => {
-    //     const restaurant22 = await Restaurant.create(seedRestaurant);
-    //     const restaurant23 = await Restaurant.findAll()
-    //     expect(restaurant23).toBe(seedRestaurant[1])
-    // });
+    test('can find Restaurants', async () => {
+        const restaurant33 = await Restaurant.create(seedRestaurant[0]);
+        const restaurant22 = await Restaurant.findByPk(1);
+        //const restaurant23 = await Restaurant.findAll()
+        expect (restaurant22 === restaurant33);
+    });
 
     // test('can find Menus', async () => {
     //     // TODO - write test
